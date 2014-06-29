@@ -1,3 +1,5 @@
+@import 'bourbon/bourbon';
+$li-width: calc(100% / 3);
 .grid {
 	margin: 0;
 	padding: 0;
@@ -8,27 +10,71 @@
 }
 
 .grid li {
+	&:last-child span {
+		span {
+			font-size: 32px;
+		}
+	}
+	&:last-child:hover span {
+		left: 0;
+	}
+}
+
+.grid li {
 	position: relative;
 	float: left;
 	font-size: 13em;
 	line-height: 1.5;
 	max-height: 290px;
 	text-align: center;
-	width: calc(100% / 4);
+	width: $li-width;
 }
 
-.grid li span {
+.grid li {
+	overflow: hidden;
+	span {
+		@include transition(all 0.5s);
+	}
+	div {
+		position: absolute;
+		top: 0;
+		left: 100%;
+		width: 200px;
+		height: 100%;
+		right: 100px;
+		background-color: rgba(0,0,0,0.6);
+		color: white;
+		font-size: 15px;
+		text-align: center;
+		@include transition(all 0.5s);
+		span {
+			font-size: 30px;
+			font-style: italic;
+		}
+	}
+	&:hover span {
+		left: -100px;
+		@include transition(all 0.4s);
+	}
+	&:hover div {
+		left: 50%;
+		@include transition(all 0.4s);
+	}
+}
+
+.grid li > span {
 	display: inline-block;
 	font-weight: 900;
 	line-height: 1;
 	position: relative;
+	left: 0;
 	color: hsla(0,0%,0%,0.6);
 	-webkit-transform-style: preserve-3d;
 	-webkit-perspective: 550px;
 	z-index: 1;
 }
 
-.grid li span:before, .grid li span:after {
+.grid li > span:before, .grid li > span:after {
 	position: absolute;
 	content: attr(data-letter);
 	line-height: inherit;
@@ -37,8 +83,9 @@
 	right: 0;
 	bottom: 0;
 	z-index: 2;
-	-webkit-transition: all 0.3s;
+	@include transition(all 0.3s);
 }
+
 
 .grid li span:before {
 	text-shadow: none;
@@ -89,6 +136,14 @@
 
 .ot-letter-bottom {
 	background: #ee7f72;
+}
+
+.ot-letter-bottom span:after {
+	color: #ee7f72;
+}
+
+.ot-letter-bottom:hover span:after {
+	color: #f19489;
 }
 
 .ot-letter-bottom span:before,
