@@ -1,5 +1,8 @@
 @import 'bourbon/bourbon';
 $li-width: calc(100% / 3);
+body {
+  margin: 0;
+}
 .grid {
 	margin: 0;
 	padding: 0;
@@ -38,7 +41,7 @@ $li-width: calc(100% / 3);
 	div {
 		position: absolute;
 		top: 0;
-		left: 100%;
+		left: -100%;
 		width: 200px;
 		height: 100%;
 		right: 100px;
@@ -53,11 +56,11 @@ $li-width: calc(100% / 3);
 		}
 	}
 	&:hover span {
-		left: -100px;
+		left: 100px;
 		@include transition(all 0.4s);
 	}
 	&:hover div {
-		left: 50%;
+		left: 0px;
 		@include transition(all 0.4s);
 	}
 }

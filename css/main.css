@@ -1,3 +1,6 @@
+body {
+  margin: 0; }
+
 .grid {
   margin: 0;
   padding: 0;
@@ -29,7 +32,7 @@
   .grid li div {
     position: absolute;
     top: 0;
-    left: 100%;
+    left: -100%;
     width: 200px;
     height: 100%;
     right: 100px;
@@ -44,12 +47,12 @@
       font-size: 30px;
       font-style: italic; }
   .grid li:hover span {
-    left: -100px;
+    left: 100px;
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
     transition: all 0.4s; }
   .grid li:hover div {
-    left: 50%;
+    left: 0px;
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
     transition: all 0.4s; }
