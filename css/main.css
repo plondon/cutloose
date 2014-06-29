@@ -9,11 +9,11 @@
 .grid li {
   position: relative;
   float: left;
-  font-size: 7em;
+  font-size: 13em;
   line-height: 1.5;
   max-height: 290px;
   text-align: center;
-  width: calc(100% / 8); }
+  width: calc(100% / 4); }
 
 .grid li span {
   display: inline-block;
