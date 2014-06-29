@@ -1,0 +1,89 @@
+.grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  font-family: 'Lato', Arial, sans-serif; }
+
+.grid li {
+  position: relative;
+  float: left;
+  font-size: 7em;
+  line-height: 1.5;
+  max-height: 290px;
+  text-align: center;
+  width: calc(100% / 8); }
+
+.grid li span {
+  display: inline-block;
+  font-weight: 900;
+  line-height: 1;
+  position: relative;
+  color: rgba(0, 0, 0, 0.6);
+  -webkit-transform-style: preserve-3d;
+  -webkit-perspective: 550px;
+  z-index: 1; }
+
+.grid li span:before, .grid li span:after {
+  position: absolute;
+  content: attr(data-letter);
+  line-height: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  -webkit-transition: all 0.3s; }
+
+.grid li span:before {
+  text-shadow: none;
+  color: rgba(0, 0, 0, 0.12); }
+
+.ot-letter-left span:before, .ot-letter-left span:after {
+  -webkit-transform-origin: 0 50%; }
+
+.ot-letter-left span:before {
+  -webkit-transform: scale(1.08, 1) skew(0deg, 1deg); }
+
+.ot-letter-left span:after {
+  text-shadow: -1px 0px 0px rgba(255, 255, 255, 0.1), 3px 0px 1px rgba(0, 0, 0, 0.4);
+  -webkit-transform: rotateY(-15deg); }
+
+.ot-letter-left:hover span:before {
+  transform: scale(0.85, 1) skew(0deg, 20deg); }
+
+.ot-letter-left:hover span:after {
+  -webkit-transform: rotateY(-40deg); }
+
+.ot-letter-left {
+  background: #e74d3c; }
+
+.ot-letter-left span {
+  -webkit-text-shadow: 1px 4px 6px #e74d3c, 0 0 0 rgba(0, 0, 0, 0.3), 1px 4px 6px #e74d3c; }
+
+.ot-letter-left span:after {
+  color: #e74d3c; }
+
+.ot-letter-left:hover span:after {
+  color: #ea6253; }
+
+.ot-letter-bottom {
+  background: #ee7f72; }
+
+.ot-letter-bottom span:before,
+.ot-letter-bottom span:after {
+  -webkit-transform-origin: 50% 0; }
+
+.ot-letter-bottom span:before {
+  -webkit-transform: scale(1, 1.05) skew(4deg, 0deg); }
+
+.ot-letter-bottom span:after {
+  text-shadow: 0px -1px 0px rgba(255, 255, 255, 0.1), 0px 3px 1px rgba(0, 0, 0, 0.4);
+  -webkit-transform: rotateX(15deg); }
+
+.ot-letter-bottom:hover span:before {
+  -webkit-transform: translateY(-0.035em) scale(1, 1.2) skew(10deg, 0deg); }
+
+.ot-letter-bottom:hover span:after {
+  -webkit-transform: translateY(0.045em) rotateX(40deg); }
