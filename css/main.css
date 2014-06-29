@@ -60,7 +60,7 @@
   background: #e74d3c; }
 
 .ot-letter-left span {
-  -webkit-text-shadow: 1px 4px 6px #e74d3c, 0 0 0 rgba(0, 0, 0, 0.3), 1px 4px 6px #e74d3c; }
+  text-shadow: 1px 4px 6px #e74d3c, 0 0 0 rgba(0, 0, 0, 0.3), 1px 4px 6px #e74d3c; }
 
 .ot-letter-left span:after {
   color: #e74d3c; }
@@ -70,6 +70,14 @@
 
 .ot-letter-bottom {
   background: #ee7f72; }
+
+.ot-letter-bottom span:after {
+  color: #ee7f72;
+}
+
+.ot-letter-bottom:hover span:after {
+  color: #f09389;
+}
 
 .ot-letter-bottom span:before,
 .ot-letter-bottom span:after {
